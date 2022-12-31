@@ -1,13 +1,13 @@
-create table if not exists geners(
+create table if not exists genres(
 	id serial primary key,
 	name varchar(40) not null
 );
 
 
-create table if not exists gener_artist(
+create table if not exists genre_artist(
 	id serial primary key,
 	artist_id integer references artists(id),
-	gener_id integer references geners(id)
+	genre_id integer references genres(id)
 );
 
 
